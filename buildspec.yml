@@ -16,7 +16,7 @@ phases:
   post_build:
     commands:
       - echo Pushing the Docker image...
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin 807034087511.dkr.ecr.us-east-1.amazonaws.com/springboot-aws-deploy
       - docker push $REPOSITORY_URI:latest
 artifacts:
   files:
